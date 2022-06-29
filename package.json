@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src -e ts,tsx --exec ts-node -r tsconfig-paths/register --files src/index.ts",
     "prd": "tsc && tsc-alias && node -r tsconfig-paths/register dist/index.js",
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "prepare": "husky install"
   },
   "keywords": [
