@@ -5,5 +5,5 @@ export const sequelizeOptions = {
   password: '123456',
   port: 3306,
   database: 'test',
-  models: [`${__dirname}/modules/**/Model/*.ts`], // 数据库模板存放地址
+  models: [`${__dirname}/modules/**/Model/*{.ts,.js}`], // 数据库模板存放地址
 };

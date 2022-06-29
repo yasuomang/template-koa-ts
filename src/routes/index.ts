@@ -1,7 +1,7 @@
 import path from 'path';
 import { loadControllers } from 'koa-router-ts';
 
-const router = loadControllers(path.resolve('src/modules'), {
+const router = loadControllers(path.resolve(__dirname, '../modules'), {
   recurse: true,
 });
 

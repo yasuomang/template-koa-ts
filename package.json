@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src -e ts,tsx --exec ts-node -r tsconfig-paths/register --files src/index.ts",
+    "prd": "tsc && tsc-alias && node -r tsconfig-paths/register dist/index.js",
     "build": "tsc",
     "prepare": "husky install"
   },
@@ -42,6 +43,7 @@
     "nodemon": "^2.0.18",
     "prettier": "^2.7.1",
     "ts-node": "^10.8.1",
+    "tsc-alias": "^1.6.11",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
