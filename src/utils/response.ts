@@ -5,6 +5,7 @@ export interface IResponseData<T> {
   data?: T;
   status?: string;
   time?: number;
+  code?: number;
 }
 
 export class IResponse<T> {
@@ -12,7 +13,9 @@ export class IResponse<T> {
   message: string;
   data?: T;
   time: number;
-  constructor({ status, message, data }: IResponseData<T>) {
+  code?: number;
+  constructor({ status, message, data, code }: IResponseData<T>) {
+    this.code = code;
     this.status = status;
     this.message = message;
     this.data = data;
@@ -24,6 +27,7 @@ export class IResponse<T> {
 export class SuccessResponse<T> extends IResponse<T> {
   constructor(options: IResponseData<T>) {
     options.status = 'ok';
+    options.code = 200;
     super(options);
   }
 }
